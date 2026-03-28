@@ -5,13 +5,16 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.Model.RegisterModel;
 import com.example.demo.Service.UserService;
+
 
 @Controller
 public class UserController {
@@ -47,13 +50,15 @@ public class UserController {
 		public String loginUser(@RequestBody RegisterModel registermodel) {
 
 		    List<RegisterModel> alluser= userservice.listAll();
-              for(RegisterModel rm : alluser) {
-            	  if (rm.getEmail().equals(registermodel.getEmail()) && rm.getPassword().equals(registermodel.getPassword())) {
-            		  return "login Sucessfully";
-            		  
-            	  }
+	          for(RegisterModel rm : alluser) {
+	        	  if (rm.getEmail().equals(registermodel.getEmail()) && rm.getPassword().equals(registermodel.getPassword())) {
+	        		  return "login Sucessfully";
+	        		  
+	        	  }
 		    }
-		    return "invalid username & password";
+		    return "Invalid Username or Password";
 		}	
-}
+	}
+
+
 

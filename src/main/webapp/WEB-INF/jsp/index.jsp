@@ -7,27 +7,31 @@
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Login</h2>
+<div class="login-container">
+    <h2>Login</h2>
 
-        <form>
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
-            </div>
+    <form>
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
 
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password" required>
-            </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
 
-            <button type="submit">Login</button>
+        <button type="button" onclick="loginForm()">Login</button>
 
-            <p class="register-link">
-                Don't have an account? <a href="registration">Register</a>
-            </p>
-        </form>
-    </div>
+
+        <p class="register-link">
+            Don't have an account? <a href="registration">Register</a>
+        </p>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/register.js"></script>
 
 </body>
 </html>
