@@ -1,5 +1,4 @@
 package com.example.demo.Service;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +19,7 @@ public class UserService {
 		
 	}
 
-
 	public List<RegisterModel> listAll() {
 		return registerrepo.findAll();
 	}
-
 }
