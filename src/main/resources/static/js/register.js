@@ -12,7 +12,7 @@ function saveuser() {
     };
 
     $.ajax({
-        url: "SaveUser",
+        url: "/SaveUser",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify(data),

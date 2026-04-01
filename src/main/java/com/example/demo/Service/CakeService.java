@@ -27,8 +27,28 @@ public class CakeService {
 	 return cakerepo.findById(id).orElse(null);
 	}
 
+	public void deleteCakeById(Long id) {
+		cakerepo.deleteById(id);
+		
+	}
+
+	public CakeModel updateCake(Long id, CakeModel cakemodel) {
+		 CakeModel existingCake = cakerepo.findById(id).orElse(null);
+
+		    if (existingCake != null) {
+		        existingCake.setCakename(cakemodel.getCakename());
+		        existingCake.setCaketype(cakemodel.getCaketype());
+		        existingCake.setCakeprice(cakemodel.getCakeprice());
+
+		        return cakerepo.save(existingCake);
+		    }
+
+		    return null;
+		}
+	}
+
 	
 
 	
 		
-	}
+	
