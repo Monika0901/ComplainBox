@@ -1,4 +1,4 @@
-package com.example.demo.Controller;
+	package com.example.demo.Controller;
 
 import java.util.List;
 
@@ -37,6 +37,7 @@ public class UserController {
 		public String showIndex() {
 			return "index";
 		}
+		
 		
 		@ResponseBody
 		@PostMapping("/SaveUser")

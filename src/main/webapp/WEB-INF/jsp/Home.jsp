@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cake Shop Home</title>
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Linking External CSS -->
 	<link rel="stylesheet" href="./css/Home.css">
@@ -14,7 +16,7 @@
         <h2 id="heading">Cake Shop</h2>
 
         <form id="cakeForm">
-
+			<input type="hidden" id="cakeId">
             <label>Enter Cake Name:</label>
             <input type="text" id="cakeName" placeholder="Enter Cake Name" required>
 
@@ -33,8 +35,7 @@
             <label>Enter Price:</label>
             <input type="number" id="cakePrice" placeholder="Enter Price" required>
 
-			<button type="button" onclick="saveCake()">Submit</button>
-
+			<button type="button" id="submitBtn" onclick="saveOrUpdateCake()">Submit</button>
         </form>
 		<!-- jQuery must be first -->
 		    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
